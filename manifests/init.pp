@@ -4,7 +4,7 @@ class resolver (
   $search     = [],
   $options    = [],
   $random     = false,
-  $ifnoop     = $::clientnoop,
+  $if_noop     = $::clientnoop,
 ) {
 
   class { '::resolver::config': } ->

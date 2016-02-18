@@ -4,7 +4,7 @@ class resolver::config (
   $search     = $resolver::search,
   $options    = $resolver::options,
   $random     = $resolver::random,
-  $brsnoop    = $resolver::brsnoop,
+  $if_noop    = $resolver::if_noop,
 ) inherits resolver {
 
   if $nameserver != [] {
