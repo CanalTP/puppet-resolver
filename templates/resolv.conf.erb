@@ -8,7 +8,7 @@ domain <%= @domain %>
 <% if !@search.empty? -%>
 search <%= @search.join(' ') %>
 <% end -%>
-<% @real_nameserver.each do |ns| -%>
+<% @real_nameservers.each do |ns| -%>
 nameserver <%= ns %>
 <% end -%>
 <% if !@options.empty? -%>
