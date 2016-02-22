@@ -1,5 +1,5 @@
 class resolver (
-  $nameserver = [],
+  $nameservers = [],
   $domain     = '',
   $search     = [],
   $options    = [],
