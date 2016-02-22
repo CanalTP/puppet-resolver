@@ -1,5 +1,5 @@
 class resolver::config (
-  $nameserver = $resolver::nameserver,
+  $nameservers = $resolver::nameservers,
   $domain     = $resolver::domain,
   $search     = $resolver::search,
   $options    = $resolver::options,
@@ -7,14 +7,14 @@ class resolver::config (
   $if_noop    = $resolver::if_noop,
 ) inherits resolver {
 
-  if $nameserver != [] {
+  if $nameservers != [] {
 
     if $random {
-      $real_nameserver = fqdn_rotate($nameserver)
+      $real_nameservers = fqdn_rotate($nameservers)
     }
     else
     {
-      $real_nameserver = $nameserver
+      $real_nameservers = $nameservers
     }
 
     file { '/etc/resolv.conf':
